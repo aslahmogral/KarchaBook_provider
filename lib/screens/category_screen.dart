@@ -14,12 +14,16 @@ class _CategoryScreenState extends State<CategoryScreen> {
   List tabScreens = [Routes.ADD_INCOME_CATEGORY, Routes.ADD_EXPENSE_CATEGORY];
   @override
   Widget build(BuildContext context) => DefaultTabController(
-      length: Tabs().tabsList.length,
-      child: Scaffold(
+        length: Tabs().tabsList.length,
+        child: Scaffold(
           appBar: AppBar(
             title: Text(Constants.CATEGORY),
             centerTitle: true,
             bottom: TabBar(tabs: [...Tabs().tabsList]),
           ),
-          body: TabBarView(children: [...tabScreens])));
+          body: TabBarView(children: [...tabScreens]),
+          floatingActionButton: FloatingActionButton(
+              child: const Icon(Icons.add), onPressed: () {}),
+        ),
+      );
 }
