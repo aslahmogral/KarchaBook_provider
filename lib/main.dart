@@ -1,8 +1,14 @@
 import 'package:flutter/material.dart';
 import 'package:karcha_book_provider/screens/navigation_screen.dart';
+import 'package:karcha_book_provider/services/boxes.dart';
+import 'package:hive_flutter/hive_flutter.dart';
 
-void main() {
+void main() async{
   runApp(const MyApp());
+  WidgetsFlutterBinding.ensureInitialized();
+  await Hive.initFlutter();
+  Boxes.registerHiveAdapter();
+  await Boxes.openHiveBoxes();
 }
 
 class MyApp extends StatelessWidget {
