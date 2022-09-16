@@ -6,4 +6,5 @@ class Constants {
   static const String KARCHABOOK = 'Karcha Book';
   static const String INCOME = 'Income';
   static const String EXPENSE = 'Expense';
+  static const String ADD_INCOME_CATEGORY = 'Add Income Category';
 }
